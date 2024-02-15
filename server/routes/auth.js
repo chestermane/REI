@@ -1,11 +1,10 @@
 const express = require("express");
+const {
+  welcome
+} = require("../controllers/auth")
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json({
-    data: "hello from node js api",
-  });
-});
+router.get("/", welcome);
 
 module.exports = router;
